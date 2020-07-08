@@ -1,0 +1,7 @@
+{
+  "name": "duman-ui",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
