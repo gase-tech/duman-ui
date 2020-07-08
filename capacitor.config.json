@@ -1,7 +1,7 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "duman-ui",
-  "bundledWebRuntime": false,
+  "appId": "io.kstech.duman",
+  "appName": "duman",
+  "bundledWebRuntime": true,
   "npmClient": "npm",
   "webDir": "www",
   "plugins": {
