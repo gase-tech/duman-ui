@@ -1,17 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Plugins } from '@capacitor/core';
-
-const {Keyboard} = Plugins;
+import { Platform } from '@ionic/angular';
+const { Keyboard } = Plugins;
 
 @Injectable({
 	providedIn: 'root',
 })
 export class KeyboardService {
 
-	constructor() {
+	constructor(public platform: Platform) {
 	}
 
-	showKeyboard() {
-		Keyboard.show();
+	async showKeyboard() {
+		if (this.platform.is('mobile')) {
+			Keyboard.show();
+		} else {
+			alert('Ne yapiyon dayioglu!');
+		}
 	}
 }
