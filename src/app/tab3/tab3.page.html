@@ -13,5 +13,13 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-content>
+    <ion-fab horizontal="center" slot="fixed" vertical="bottom">
+      <ion-fab-button (click)="scanQrCode()">
+        <ion-icon name="qr-code-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
+
   <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>
