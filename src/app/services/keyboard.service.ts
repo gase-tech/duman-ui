@@ -5,18 +5,18 @@ import { Platform } from '@ionic/angular';
 const {Keyboard} = Plugins;
 
 @Injectable({
-	providedIn: 'root',
+  providedIn: 'root',
 })
 export class KeyboardService {
 
-	constructor(public platform: Platform) {
-	}
+  constructor(public platform: Platform) {
+  }
 
-	async showKeyboard() {
-		if (this.platform.is('mobile')) {
-			Keyboard.show();
-		} else {
-			alert('Ne yapiyon dayioglu!');
-		}
-	}
+  async showKeyboard() {
+    if (this.platform.is('mobile')) {
+      Keyboard.show();
+    } else {
+      alert('Ne yapiyon dayioglu!');
+    }
+  }
 }

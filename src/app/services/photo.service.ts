@@ -4,31 +4,31 @@ import { CameraResultType, CameraSource, Plugins } from '@capacitor/core';
 const {Camera, Filesystem, Storage} = Plugins;
 
 interface Photo {
-	filepath: string;
-	webviewPath: string;
-	base64?: string;
+  filepath: string;
+  webviewPath: string;
+  base64?: string;
 }
 
 @Injectable({
-	providedIn: 'root',
+  providedIn: 'root',
 })
 export class PhotoService {
 
-	public photos: Photo[] = [];
+  public photos: Photo[] = [];
 
-	public async addNewToGallery() {
-		const capturedPhoto = await Camera.getPhoto({
-			resultType: CameraResultType.Uri,
-			source: CameraSource.Camera,
-			quality: 100,
-		});
+  public async addNewToGallery() {
+    const capturedPhoto = await Camera.getPhoto({
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera,
+      quality: 100,
+    });
 
-		console.log(capturedPhoto.webPath);
+    console.log(capturedPhoto.webPath);
 
 
-		this.photos.unshift({
-			filepath: 'soon...',
-			webviewPath: capturedPhoto.webPath,
-		});
-	}
+    this.photos.unshift({
+      filepath: 'soon...',
+      webviewPath: capturedPhoto.webPath,
+    });
+  }
 }
