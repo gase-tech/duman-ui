@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 import { Platform } from '@ionic/angular';
-const { Keyboard } = Plugins;
+
+const {Keyboard} = Plugins;
 
 @Injectable({
 	providedIn: 'root',
