@@ -3,7 +3,7 @@
 # And the CLI then renames it
 
 # Using Android gitignore template: https://github.com/github/gitignore/blob/master/Android.gitignore
-.idea
+
 # Built application files
 *.apk
 *.ap_
